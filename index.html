@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man – Play Instantly!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pac-Man – Play Game Instantly!</h1>
+
+        <div id="paused" class="overlay">PAUSED</div>
+
+        <div class="score">
+            <span>1UP</span>
+            <span id="score">0</span>
+            <span>HIGH SCORE</span>
+            <span id="highScore">0</span>
+        </div>
+
+        <canvas id="gameCanvas" width="448" height="496"></canvas>
+
+        <div id="oops" class="overlay hidden">
+            <strong>OOPS!</strong><br>
+            We were unable to load the images/sounds needed to play the game.<br>
+            This could be due to a poor connection, a strict network policy, or by playing on an unsupported browser.
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
