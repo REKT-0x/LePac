@@ -2,7 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Le-Pac">
+    <meta name="theme-color" content="#000">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
     <title>Le-Pac – Play Instantly!</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,7 +22,7 @@
 
         <div class="score">
             <div class="player-info">
-                <canvas id="avatarCanvas" width="48" height="48" class="avatar"></canvas>
+                <canvas id="avatarCanvas" width="48" height="48" class="avatar" tabindex="0"></canvas>
                 <span>1UP</span>
             </div>
             <span id="score">0</span>
@@ -22,9 +30,9 @@
             <span id="highScore">0</span>
         </div>
 
-        <input type="file" id="avatarInput" accept="image/*" style="display:none;">
+        <input type="file" id="avatarInput" accept="image/*" style="display:none; font-size:16px;">
 
-        <canvas id="gameCanvas" width="448" height="496"></canvas>
+        <canvas id="gameCanvas" width="448" height="496" tabindex="0"></canvas>
 
         <div id="oops" class="overlay hidden">
             <strong>OOPS!</strong><br>
@@ -38,10 +46,10 @@
                 <div id="joystickKnob" class="knob"></div>
             </div>
             <div class="action-buttons">
-                <button id="btnUp">↑</button>
-                <button id="btnDown">↓</button>
-                <button id="btnLeft">←</button>
-                <button id="btnRight">→</button>
+                <button id="btnUp" aria-label="Up">Up</button>
+                <button id="btnDown" aria-label="Down">Down</button>
+                <button id="btnLeft" aria-label="Left">Left</button>
+                <button id="btnRight" aria-label="Right">Right</button>
             </div>
         </div>
     </div>
