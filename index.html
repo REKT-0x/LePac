@@ -2,22 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pac-Man – Play Instantly!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Le-Pac – Play Instantly!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Pac-Man – Play Game Instantly!</h1>
+        <h1>Le-Pac – Play Game Instantly!</h1>
 
         <div id="paused" class="overlay">PAUSED</div>
 
         <div class="score">
-            <span>1UP</span>
+            <div class="player-info">
+                <canvas id="avatarCanvas" width="48" height="48" class="avatar"></canvas>
+                <span>1UP</span>
+            </div>
             <span id="score">0</span>
             <span>HIGH SCORE</span>
             <span id="highScore">0</span>
         </div>
+
+        <input type="file" id="avatarInput" accept="image/*" style="display:none;">
 
         <canvas id="gameCanvas" width="448" height="496"></canvas>
 
@@ -26,8 +31,22 @@
             We were unable to load the images/sounds needed to play the game.<br>
             This could be due to a poor connection, a strict network policy, or by playing on an unsupported browser.
         </div>
+
+        <!-- Mobile Controls -->
+        <div id="mobileControls" class="controls">
+            <div id="joystick" class="joystick">
+                <div id="joystickKnob" class="knob"></div>
+            </div>
+            <div class="action-buttons">
+                <button id="btnUp">↑</button>
+                <button id="btnDown">↓</button>
+                <button id="btnLeft">←</button>
+                <button id="btnRight">→</button>
+            </div>
+        </div>
     </div>
 
+    <script src="avatar.js"></script>
     <script src="game.js"></script>
 </body>
 </html>
